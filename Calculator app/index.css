@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 30%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: solid rgb(136, 134, 134) 3px;
+    border-radius: 13px;
+}
+
+form{
+    width: 50%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5rem;
+
+    
+}
+
+input{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#num1 , #num2 {
+
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid blue 3px;
+    font-size: 33px;
+
+
+}
+
+.operations{
+    height: 50%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ans{
+    height: 20%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#answer{
+    width: 100%;
+    height: 100%;
+
+    border-bottom: solid blue 3px;
+    font-size: 33px;
+}
+
+button{
+    width: 24%;
+    height: 35%;
+    background-color: white;
+    border-radius: 4px;
+}
