@@ -34,25 +34,37 @@ ul{
     font-family: serif;
     margin-left: 3rem;
     margin-top: 1rem;
-    color: #5f9341;
+    color: #28b328;
 }
 
 li{
     list-style: none;
 }
 a{
-    color: #5f9341;
+    color: #28b328;
 
 }
-button{
+#save-btn{
     margin-top: .6rem;
     height: 40px;
     width: 10rem;
-    background-color: #aab039;
+    background-color: #28b328;
     border: none;
     border-radius: 3px;
-    font-size: 17px;
+    font-size: 19px;
     color: white;
+    font-weight: 300;
+
+}
+#delete-btn{
+    margin-top: .6rem;
+    height: 40px;
+    width: 10rem;
+    background-color: #ffffff;
+    border:  solid 2.5px ;
+    border-radius: 3px;
+    font-size: 19px;
+    color: #28b328;
     font-weight: 300;
 
 }

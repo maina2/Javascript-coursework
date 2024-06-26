@@ -6,6 +6,12 @@ const ulEl = document.getElementById("ul-el");
 const containerEl = document.getElementById("container");
 
  let inputBtn = document.getElementById("save-btn");
+ let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+  
+ if(leadsFromLocalStorage){
+  myLeads=leadsFromLocalStorage
+  renderLeads()
+ }
 
 
 
@@ -35,11 +41,11 @@ function renderLeads (){
 }
 
 
- containerEl.innerHTML = "<button onclick='Buy()'>Buy</button>";
- function Buy(){
+//  containerEl.innerHTML = "<button onclick='Buy()'>Buy</button>";
+//  function Buy(){
 
-   containerEl.innerHTML += "<p>Thankyou foy buying</p>"
- }
+//    containerEl.innerHTML += "<p>Thankyou foy buying</p>"
+//  }
 
  const recipient = "James"
  const sender = "Morgen"
