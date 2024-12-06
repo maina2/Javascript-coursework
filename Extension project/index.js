@@ -5,15 +5,28 @@ const inputEl = document.getElementById("input-el")
 const ulEl = document.getElementById("ul-el");
 const containerEl = document.getElementById("container");
 
- let inputBtn = document.getElementById("save-btn");
+
+
  let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
-  
+ let inputBtn = document.getElementById("save-btn");
+ let deleteBtn = document.getElementById("delete-btn")
+ let tabBtn = document.getElementById("tab-btn")
+
  if(leadsFromLocalStorage){
   myLeads=leadsFromLocalStorage
-  renderLeads()
+  renderLeads(myLeads)
  }
 
+ let tabs = [
+  {url:"www.linked.com/simonmaina" }
+]
 
+tabBtn.addEventListener("click",function () {
+
+  let one = tabs[0].url
+  containerEl.innerHTML = `<p>${one} </p>`
+  
+})
 
  inputBtn.addEventListener("click", function () {
    myLeads.push(inputEl.value);
@@ -22,16 +35,16 @@ const containerEl = document.getElementById("container");
 
     console.log(localStorage.getItem("myLeads"));
    
-   renderLeads();
+   renderLeads(myLeads);
  })
 
-function renderLeads (){
+function renderLeads (leads){
   let listholder = ""
 
-  for (let i=0;i<myLeads.length;i++){
+  for (let i=0;i<leads.length;i++){
     listholder  += `
     <li>
-    <a target= '_blank' href=' ${myLeads[i]}'>${myLeads[i]} </a>
+    <a target= '_blank' href=' ${leads[i]}'>${leads[i]} </a>
     </li>
     `
  
@@ -41,22 +54,54 @@ function renderLeads (){
 }
 
 
+deleteBtn.addEventListener("dblclick",function(){
+  console.log("Double clicked")
+    localStorage.clear();
+    myLeads= [];
+    renderLeads(myLeads)
+
+})
+
+let welcomeEl = document.getElementById("welcome")
+
+
+
+
+function getFirst(arr){
+  return arr[0];
+}
+
+let Firstcard = getFirst([10,12,14])
+console.log(Firstcard);
+
+
 //  containerEl.innerHTML = "<button onclick='Buy()'>Buy</button>";
 //  function Buy(){
 
 //    containerEl.innerHTML += "<p>Thankyou foy buying</p>"
 //  }
 
- const recipient = "James"
- const sender = "Morgen"
+//  const recipient = "James"
+//  const sender = "Morgen"
 
- const email = `Hey ${recipient}  How  are you. Cheers ${sender}`
+//  const email = `Hey ${recipient}  How  are you. Cheers ${sender}`
 
-  console.log(email)
+//   console.log(email)
 
-  localStorage.setItem("name","simon")
-  localStorage.setItem("country","Africa")
+//   localStorage.setItem("name","simon")
+//   localStorage.setItem("country","Africa")
 
 
-  localStorage.getItem("name");
-  localStorage.clear()
+//   localStorage.getItem("name");
+//   localStorage.clear()
+
+let myCourse = ["Learn CSS Animations","UI Designs Fundamentals","Intro to clean code"]
+
+function practice (arr){//Parameters are inside
+  for(let i=0;i<arr.length;i++){
+    console.log(arr[i])//Parameters are inside;
+  }
+
+}
+
+practice(myCourse);//Arguments are outside
